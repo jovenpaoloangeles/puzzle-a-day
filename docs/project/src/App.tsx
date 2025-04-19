@@ -62,7 +62,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white py-8">
       <div className="container mx-auto px-4 pb-12 flex flex-col items-center">
-        <Header title="Puzzle-A-Day" date={new Date(data.date)} />
+        <Header title="Puzzle-A-Day Solution" date={new Date(data.date)} />
         <div className="my-4">
           <PuzzleBoard emojiBoard={data.main_solution.emoji_board} />
         </div>

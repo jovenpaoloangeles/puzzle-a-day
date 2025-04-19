@@ -29,7 +29,12 @@ def main(year, out_dir):
     set2 = config['guanglu']['set2']
 
     os.makedirs(out_dir, exist_ok=True)
-    start_date = datetime.date(year, 1, 1)
+    # Start from today if year matches current year and today is within the year, else from Jan 1
+    today = datetime.date.today()
+    if year == today.year and today <= datetime.date(year, 12, 31):
+        start_date = today
+    else:
+        start_date = datetime.date(year, 1, 1)
     end_date = datetime.date(year, 12, 31)
     delta = datetime.timedelta(days=1)
     date = start_date
@@ -77,7 +82,7 @@ def main(year, out_dir):
         # For main_solution, just show the first solution of panel 1 if available
         data = {
             'date': date_str,
-            'main_solution': solution_to_dict(sol2[0]) if sol2 else {},
+            'main_solution': solution_to_dict(sol2[1]) if sol2 else {},
             'panels': panels
         }
         with open(out_path, 'w', encoding='utf-8') as f:
