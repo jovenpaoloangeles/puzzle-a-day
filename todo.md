@@ -18,7 +18,7 @@
     - [ ] Center: Set 1, with reflections
     - [ ] Right: Set 2, no reflections ("Smooth Side Only")
     - [ ] For each panel, display only 10 pre-generated solutions and the total number of solutions (do not show all solutions in the app)
-- [ ] Fetch and display data from JSON
+- [x] Fetch and display data from JSON
 - [x] Ensure responsive layout for desktop/mobile
 
 ## 3. Deployment
