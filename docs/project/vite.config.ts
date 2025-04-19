@@ -7,4 +7,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  // Base path for GitHub Pages deployment
+  base: '/puzzle-a-day/',
 });
