@@ -39,6 +39,9 @@ jobs:
           cd docs/project
           npm run build
 
+      - name: List build output
+        run: ls -l docs/project/dist
+
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
