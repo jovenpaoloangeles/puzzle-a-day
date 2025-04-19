@@ -1,27 +1,48 @@
-name: Update Puzzle-A-Day Page
+name: Update & Deploy Puzzle-A-Day Page
 
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs daily at midnight UTC
-  workflow_dispatch:      # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      # Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install dependencies
+
+      - name: Install Python dependencies
         run: pip install beautifulsoup4
+
       - name: Run puzzle-a-day.py
         run: python puzzle-a-day.py
-      - name: Commit and push if changed
+
+      # Set up Node.js for React build
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Node.js dependencies
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Update puzzle for $(date +'%Y-%m-%d')" || exit 0
-          git push
+          cd docs/project
+          npm ci
+
+      - name: Build React app
+        run: |
+          cd docs/project
+          npm run build
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/project/dist
+          publish_branch: gh-pages
