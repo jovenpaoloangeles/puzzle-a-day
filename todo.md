@@ -1,31 +1,38 @@
-# TODO for Puzzle-A-Day GitHub Page
+# TODO: Puzzle-A-Day GitHub Page Roadmap
 
-## Main Features
-- [x] Display the current date at the top of the page
-- [ ] Show a central area for "Today's Solution" (example solution)
-- [ ] Surround the solution area with 8 puzzle pieces, each labeled (Piece 1 to Piece 8)
-- [ ] Below the puzzle area, display three panels:
-    - [ ] Left: "Rough Side Only" — show a solution for set 1, no reflections, and display total possible solutions
-    - [ ] Center: "With Reflections" — show a solution for set 1, with reflections, and display total possible solutions
-    - [ ] Right: "Smooth Side Only" — show a solution for set 2, no reflections, and display total possible solutions
-- [ ] Match the layout and style of the provided image
+## 1. Data Generation
+- [x] Define JSON data structure for daily puzzle solutions
+- [x] Update `puzzle-a-day.py` to output required data for the web UI
+    - Main solution for the current date
+    - Three panel solutions (rough side only, with reflections, smooth side only)
+    - Total number of solutions for each panel
+    - Note: Some days generate thousands of solutions (e.g. 2139+), consider performance for UI display.
+- [x] Pre-generate data for a year (one JSON per day, for 365 days)
 
-## Technical Steps
-- [ ] Use Tailwind CSS for styling
-- [ ] Use puzzle-a-day.py to generate solutions
-- [ ] Use puzzle-a-day.ini as the puzzle data source (set1 = rough side, set2 = smooth side)
-- [ ] Implement date logic (auto-update to current date)
-- [ ] Create puzzle piece layout and styling
-- [ ] Render example solutions and counts in each panel
-- [ ] Add responsive design for different devices
-- [ ] Deploy to GitHub Pages
+## 2. Web UI Implementation
+- [x] Set up project with Tailwind CSS for styling
+- [x] Display the current date at the top
+- [x] Render main puzzle solution area, with pieces arranged around it
+- [ ] Create three solution panels below:
+    - [ ] Left: Set 1, no reflections ("Rough Side Only")
+    - [ ] Center: Set 1, with reflections
+    - [ ] Right: Set 2, no reflections ("Smooth Side Only")
+    - [ ] For each panel, display only 10 pre-generated solutions and the total number of solutions (do not show all solutions in the app)
+- [ ] Fetch and display data from JSON
+- [x] Ensure responsive layout for desktop/mobile
+
+## 3. Deployment
+
+- [ ] Optimize web UI for performance with large solution sets
+
+- [ ] Prepare static build for GitHub Pages
+- [ ] Deploy to GitHub Pages repository
 
 ## Stretch Goals
-- [ ] Add interactivity (e.g., change date, view other solutions)
-- [ ] Animate puzzle pieces or solutions
-- [ ] Add dark mode
+- [ ] Add interactivity (e.g., select different dates)
+- [ ] Animate puzzle pieces/solutions
+- [ ] Add dark mode toggle
 
 ---
-
-- Tailwind will be used for all layout and styling.
-- puzzle-a-day.py will be used to generate the example solutions and counts, reading from puzzle-a-day.ini (set1 = rough side, set2 = smooth side).
+- All layout and styling with Tailwind CSS
+- Data source: puzzle-a-day.py + puzzle-a-day.ini (set1 = rough side, set2 = smooth side)

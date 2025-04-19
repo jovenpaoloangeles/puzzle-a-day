@@ -1,18 +1,8 @@
-#!/usr/bin/env python3
-"""
-Author: Michael Shepanski <michael.shepanski@gmail.com>
-Copyright: (c) 2022 Michael Shepanski
-License: GNU General Public License <http://www.gnu.org/licenses/>
 
-References:
-https://en.wikipedia.org/wiki/Exact_cover
-"""
 import argparse, copy, itertools, time, uuid
 from algox import exact_cover, solve
 
-# All shapes need to be an even 2d array. All pieces need to be the same
-# size 2d array. The dark black square represents an empty space allowing
-# for unique shapes and sizes.
+
 EXAMPLE_BOARD = """
 ⬛⬛🟫🟫🟫⬛⬛
 🟫🟫🟫🟫🟫🟫🟫

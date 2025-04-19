@@ -8,6 +8,7 @@ https://www.dragonfjord.com/product/a-puzzle-a-day/
 import argparse, datetime, random, time
 import configparser, multiprocessing
 import pentomino
+from bs4 import BeautifulSoup
 
 
 def rgb(text, color='#aaa'):
