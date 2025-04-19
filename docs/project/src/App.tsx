@@ -41,7 +41,10 @@ function App() {
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
-    const url = `/data/sample-${yyyy}-${mm}-${dd}.json`;
+    // Get base URL from import.meta.env.BASE_URL (provided by Vite)
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const url = `${baseUrl}data/sample-${yyyy}-${mm}-${dd}.json`;
+    console.log('Fetching data from:', url);
     setLoading(true);
     fetch(url)
       .then(res => {
