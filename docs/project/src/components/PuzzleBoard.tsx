@@ -1,19 +1,8 @@
 import React from 'react';
 import PuzzlePiece from './PuzzlePiece';
 import SolutionArea from './SolutionArea';
+import { puzzlePieces } from '../data/puzzleData';
 
-const set1ColorMap: Record<number, { color: string; label: string }> = {
-  1: { color: '#a78bfa', label: '' },
-  2: { color: '#60a5fa', label: '' },
-  3: { color: '#34d399', label: '' },
-  4: { color: '#fbbf24', label: '' },
-  5: { color: '#facc15', label: '' },
-  6: { color: '#f87171', label: '' },
-  7: { color: '#a16207', label: '' },
-  8: { color: '#f3f4f6', label: '' },
-  9: { color: '#a78bfa', label: '' }, // duplicate to make 10 pieces
-  10: { color: '#60a5fa', label: '' },
-};
 
 const gridPositions = [
   { col: 1, row: 1 }, // top‑left
@@ -33,15 +22,8 @@ interface PuzzleBoardProps {
 }
 
 const PuzzleBoard: React.FC<PuzzleBoardProps> = ({ emojiBoard }) => {
-  // Build 10 pieces from mapping for the surrounding layout
-  const piecesToRender = Array.from({ length: 10 }, (_, idx) => {
-    const id = idx + 1;
-    return {
-      id,
-      color: set1ColorMap[id].color,
-      label: set1ColorMap[id].label,
-    };
-  });
+  // Use the hardcoded puzzlePieces array (with shape) for the surrounding layout
+  const piecesToRender = puzzlePieces;
 
   return (
     <div className="container mx-auto flex flex-col items-center">

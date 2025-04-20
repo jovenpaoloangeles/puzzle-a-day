@@ -1,16 +1,76 @@
 import { PuzzlePiece, SolutionOption } from '../types';
 
 export const puzzlePieces: PuzzlePiece[] = [
-  { id: 1, color: '#C5DCFA', label: 'Piece 1' },
-  { id: 2, color: '#C5F5D5', label: 'Piece 2' },
-  { id: 3, color: '#FBBFBF', label: 'Piece 3' },
-  { id: 4, color: '#FEF68D', label: 'Piece 4' },
-  { id: 5, color: '#E3CBFF', label: 'Piece 5' },
-  { id: 6, color: '#FFDCBA', label: 'Piece 6' },
-  { id: 7, color: '#A5EEE0', label: 'Piece 7' },
-  { id: 8, color: '#FDC5E1', label: 'Piece 8' },
-  { id: 9, color: '#B7E4F9', label: 'Piece 9' },
-  { id: 10, color: '#FFB7B7', label: 'Piece 10' }
+  { id: 1, color: '#9B59B6', label: 'Piece 1', shape: [
+    '##..',
+    '.#..',
+    '.#..',
+    '.#..',
+    '....',
+  ] },
+  { id: 2, color: '#3498DB', label: 'Piece 2', shape: [
+    '#...',
+    '##..',
+    '.#..',
+    '.#..',
+    '....',
+  ] },
+  { id: 3, color: '#2ECC71', label: 'Piece 3', shape: [
+    '####',
+    '#...',
+    '....',
+    '....',
+    '....',
+  ] },
+  { id: 4, color: '#E67E22', label: 'Piece 4', shape: [
+    '.##.',
+    '.#..',
+    '##..',
+    '....',
+    '....',
+  ] },
+  { id: 5, color: '#9B59B6', label: 'Piece 5', shape: [
+    '#...',
+    '#...',
+    '#...',
+    '#...',
+    '....',
+  ] },
+  { id: 6, color: '#E74C3C', label: 'Piece 6', shape: [
+    '#...',
+    '#...',
+    '###.',
+    '....',
+    '....',
+  ] },
+  { id: 7, color: '#3498DB', label: 'Piece 7', shape: [
+    '##..',
+    '##..',
+    '.#..',
+    '....',
+    '....',
+  ] },
+  { id: 8, color: '#FFFFFF', label: 'Piece 8', shape: [
+    '###.',
+    '.#..',
+    '.#..',
+    '....',
+    '....',
+  ] },
+  { id: 9, color: '#F1C40F', label: 'Piece 9', shape: [
+    '##..',
+    '#...',
+    '##..',
+    '....',
+    '....',
+  ] },
+  { id: 10, color: '#8B4513', label: 'Piece 10', shape: [
+    '.#..',
+    '##..',
+    '#...',
+    '....',
+    '....',
+  ] }
 ];
 
 export const solutionOptions: SolutionOption[] = [

@@ -6,14 +6,13 @@ interface PuzzlePieceProps {
   onClick?: () => void;
 }
 
-// Piece shapes are no longer used as we're just showing colored blocks
-
 const PuzzlePiece: React.FC<PuzzlePieceProps> = ({ piece, onClick }) => {
+  const shape = piece.shape;
   return (
     <div
-      className="rounded-lg shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:scale-105 flex items-center justify-center"
+      className="rounded-lg cursor-pointer transition-all duration-300 hover:scale-105 flex flex-col items-center justify-center"
       style={{ 
-        backgroundColor: piece.color, 
+        backgroundColor: '#00000000', // neutral background
         width: '90px', 
         height: '90px',
         color: '#333',
@@ -21,7 +20,27 @@ const PuzzlePiece: React.FC<PuzzlePieceProps> = ({ piece, onClick }) => {
       }}
       onClick={onClick}
     >
-      <span className="text-center">{piece.label || `Piece ${piece.id}`}</span>
+      {shape ? (
+        <div className="flex flex-col items-center justify-center" style={{width: '90px', height: '90px'}}>
+          {shape.map((row, rowIdx) => (
+            <div key={rowIdx} className="flex flex-row justify-center" style={{height: '30px'}}>
+              {row.split('').map((cell, colIdx) => (
+                <div
+                  key={colIdx}
+                  style={{
+                    width: '15px',
+                    height: '15px',
+                    backgroundColor: cell === '#' ? piece.color : 'transparent',
+                    margin: '1px',
+                    borderRadius: '0px',
+                    border: cell === '#' ? '1px solid #888' : '1px solid transparent',
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };
