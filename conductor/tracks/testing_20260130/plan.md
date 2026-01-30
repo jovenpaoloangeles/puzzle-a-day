@@ -8,7 +8,7 @@ Implement unit and integration tests for the core algorithm and data generation.
 - [x] Task: Set up `pytest` environment [f13b01e]
     - [x] Install `pytest` and `pytest-cov`.
     - [x] Create `tests/` directory.
-- [x] Task: Implement tests for `algox.py` [950153c]
+- [x] Task: Implement tests for `algox.py` [d54dbe2]
     - [x] Write unit tests for `exact_cover` and `solve` functions.
     - [x] Verify accuracy with sample constraint matrices.
 - [ ] Task: Implement tests for `pentomino.py`
