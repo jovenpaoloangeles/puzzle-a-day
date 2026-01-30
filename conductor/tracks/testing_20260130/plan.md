@@ -38,7 +38,7 @@ Implement component tests for the frontend.
 ## Phase 3: E2E and Visual Verification (Playwright)
 Implement full user flow and basic rendering checks.
 
-- [x] Task: Set up `Playwright` [e1e2f3g]
+- [x] Task: Set up `Playwright` [9dffdc7]
     - [x] Install `@playwright/test`.
     - [x] Initialize Playwright configuration.
 - [ ] Task: Implement E2E tests for primary user flow
