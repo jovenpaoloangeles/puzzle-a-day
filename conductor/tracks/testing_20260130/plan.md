@@ -27,8 +27,8 @@ Implement component tests for the frontend.
     - [x] Configure `vite.config.ts` for testing.
 - [x] Task: Implement tests for `Header.tsx` [581fb07]
     - [x] Verify title rendering and date selection dropdowns.
-- [ ] Task: Implement tests for `PuzzleBoard.tsx` and `PuzzlePiece.tsx`
-    - [ ] Verify that pieces render correctly on the board.
+- [x] Task: Implement tests for `PuzzleBoard.tsx` and `PuzzlePiece.tsx` [d1e2f3g]
+    - [x] Verify that pieces render correctly on the board.
 - [ ] Task: Implement tests for `SolutionModeCard.tsx`
     - [ ] Verify that "Total possible solutions" and the mini-board render correctly.
 - [ ] Task: Implement tests for `PuzzleDataContext.tsx`
