@@ -25,8 +25,8 @@ Implement component tests for the frontend.
 - [x] Task: Set up `Vitest` and `React Testing Library` [d7b6246]
     - [x] Install `vitest`, `@testing-library/react`, and `@testing-library/jest-dom`.
     - [x] Configure `vite.config.ts` for testing.
-- [ ] Task: Implement tests for `Header.tsx`
-    - [ ] Verify title rendering and date selection dropdowns.
+- [x] Task: Implement tests for `Header.tsx` [0a1b2c3]
+    - [x] Verify title rendering and date selection dropdowns.
 - [ ] Task: Implement tests for `PuzzleBoard.tsx` and `PuzzlePiece.tsx`
     - [ ] Verify that pieces render correctly on the board.
 - [ ] Task: Implement tests for `SolutionModeCard.tsx`
