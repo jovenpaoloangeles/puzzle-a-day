@@ -44,8 +44,8 @@ Implement full user flow and basic rendering checks.
 - [x] Task: Implement E2E tests for primary user flow [1038c6e]
     - [x] Load app -> Select date -> Verify solution displays.
     - [x] Toggle solution modes -> Verify board updates.
-- [ ] Task: Implement basic visual verification
-    - [ ] Ensure no visual regressions on core UI elements.
+- [x] Task: Implement basic visual verification [1038c6e]
+    - [x] Ensure no visual regressions on core UI elements.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: E2E and Visual Verification' (Protocol in workflow.md)
 
 ## Phase 4: CI Integration
