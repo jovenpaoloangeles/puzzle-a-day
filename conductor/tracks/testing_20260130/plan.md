@@ -5,7 +5,7 @@ This plan outlines the steps to implement a robust testing suite for the Python 
 ## Phase 1: Python Testing Suite (pytest)
 Implement unit and integration tests for the core algorithm and data generation.
 
-- [x] Task: Set up `pytest` environment
+- [x] Task: Set up `pytest` environment [f13b01e]
     - [x] Install `pytest` and `pytest-cov`.
     - [x] Create `tests/` directory.
 - [ ] Task: Implement tests for `algox.py`
