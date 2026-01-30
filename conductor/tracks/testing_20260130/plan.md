@@ -31,8 +31,8 @@ Implement component tests for the frontend.
     - [x] Verify that pieces render correctly on the board.
 - [x] Task: Implement tests for `SolutionModeCard.tsx` [2edb134]
     - [x] Verify that "Total possible solutions" and the mini-board render correctly.
-- [ ] Task: Implement tests for `PuzzleDataContext.tsx`
-    - [ ] Verify data fetching and date filtering logic.
+- [x] Task: Implement tests for `PuzzleDataContext.tsx` [0b1c2d3]
+    - [x] Verify data fetching and date filtering logic.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: React Testing Suite' (Protocol in workflow.md)
 
 ## Phase 3: E2E and Visual Verification (Playwright)
