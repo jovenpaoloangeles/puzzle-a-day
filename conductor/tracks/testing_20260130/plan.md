@@ -2,7 +2,7 @@
 
 This plan outlines the steps to implement a robust testing suite for the Python backend and React frontend.
 
-## Phase 1: Python Testing Suite (pytest)
+## Phase 1: Python Testing Suite (pytest) [checkpoint: 61e77b1]
 Implement unit and integration tests for the core algorithm and data generation.
 
 - [x] Task: Set up `pytest` environment [f13b01e]
