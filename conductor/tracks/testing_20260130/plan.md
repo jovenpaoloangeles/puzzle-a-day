@@ -29,7 +29,7 @@ Implement component tests for the frontend.
     - [x] Verify title rendering and date selection dropdowns.
 - [x] Task: Implement tests for `PuzzleBoard.tsx` and `PuzzlePiece.tsx` [ae17d0b]
     - [x] Verify that pieces render correctly on the board.
-- [x] Task: Implement tests for `SolutionModeCard.tsx` [8e9f0a1]
+- [x] Task: Implement tests for `SolutionModeCard.tsx` [2edb134]
     - [x] Verify that "Total possible solutions" and the mini-board render correctly.
 - [ ] Task: Implement tests for `PuzzleDataContext.tsx`
     - [ ] Verify data fetching and date filtering logic.
