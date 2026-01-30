@@ -41,9 +41,9 @@ Implement full user flow and basic rendering checks.
 - [x] Task: Set up `Playwright` [9dffdc7]
     - [x] Install `@playwright/test`.
     - [x] Initialize Playwright configuration.
-- [ ] Task: Implement E2E tests for primary user flow
-    - [ ] Load app -> Select date -> Verify solution displays.
-    - [ ] Toggle solution modes -> Verify board updates.
+- [x] Task: Implement E2E tests for primary user flow [439a8c1]
+    - [x] Load app -> Select date -> Verify solution displays.
+    - [x] Toggle solution modes -> Verify board updates.
 - [ ] Task: Implement basic visual verification
     - [ ] Ensure no visual regressions on core UI elements.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: E2E and Visual Verification' (Protocol in workflow.md)
