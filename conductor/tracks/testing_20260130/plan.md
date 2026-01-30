@@ -19,7 +19,7 @@ Implement unit and integration tests for the core algorithm and data generation.
     - [x] Verify JSON schema and data completeness.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Python Testing Suite' (Protocol in workflow.md)
 
-## Phase 2: React Testing Suite (Vitest & RTL)
+## Phase 2: React Testing Suite (Vitest & RTL) [checkpoint: ab02dc5]
 Implement component tests for the frontend.
 
 - [x] Task: Set up `Vitest` and `React Testing Library` [d7b6246]
