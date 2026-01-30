@@ -1,1 +1,20 @@
+# Python
 *.pyc
+__pycache__/
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build output
+docs/project/dist/
+
+# Data files - exclude individual date files, keep consolidated
+docs/project/public/data/sample-*.json
+# Keep the consolidated file:
+!docs/project/public/data/puzzles_*.json
+
+# Ignore root-level generated JSON files
+/*.json
