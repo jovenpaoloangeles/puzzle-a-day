@@ -1,0 +1,54 @@
+name: Update Puzzle Data
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Year to generate data for'
+        required: false
+        default: '2026'
+
+jobs:
+  generate-and-deploy-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Setup UV
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install Python dependencies
+        run: |
+          uv venv
+          uv pip install -r requirements.txt
+        continue-on-error: true
+
+      - name: Generate consolidated puzzle data (ULTRA FAST)
+        run: |
+          $YEAR = "${{ github.event.inputs.year }}"
+          if ([string]::IsNullOrEmpty($YEAR)) {
+            $YEAR = "2026"
+          }
+          Write-Host "Generating puzzle data for year: $YEAR (using optimized multiprocessing)"
+          uv run python generate_consolidated_json_ultra_fast.py --year $YEAR --output "docs/project/public/data/puzzles_$YEAR.json"
+        shell: pwsh
+
+      - name: Commit and push data to main
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/project/public/data/puzzles_*.json
+          if (git diff --staged --quiet) {
+            Write-Host "No changes to commit"
+          } else {
+            git commit -m "Update consolidated puzzle data - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+            git push origin main
+          }
+        shell: pwsh

@@ -17,7 +17,7 @@ const daysInMonth = (month: number, year: number) => {
 
 const Header: React.FC<HeaderProps> = ({ title, date, onDateChange }) => {
   // Controlled values
-  const selectedYear = 2025;
+  const selectedYear = 2026;
   const selectedMonth = date.getMonth();
   const selectedDay = date.getDate();
   const days = Array.from({ length: daysInMonth(selectedMonth, selectedYear) }, (_, i) => i + 1);
@@ -61,12 +61,13 @@ const Header: React.FC<HeaderProps> = ({ title, date, onDateChange }) => {
             <option key={day} value={day}>{day}</option>
           ))}
         </select>
-        {/* Year Dropdown (only 2025) */}
+        {/* Year Dropdown (only 2026) */}
         <select
           className="border rounded px-2 py-1 text-sm"
           value={selectedYear}
           onChange={handleYearChange}
         >
+          <option value={2026}>2026</option>
           <option value={2025}>2025</option>
         </select>
       </div>
