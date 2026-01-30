@@ -11,9 +11,9 @@ Implement unit and integration tests for the core algorithm and data generation.
 - [x] Task: Implement tests for `algox.py` [d54dbe2]
     - [x] Write unit tests for `exact_cover` and `solve` functions.
     - [x] Verify accuracy with sample constraint matrices.
-- [ ] Task: Implement tests for `pentomino.py`
-    - [ ] Write unit tests for `Shape` and `Puzzle` classes.
-    - [ ] Verify solution finding with known board/piece configurations.
+- [x] Task: Implement tests for `pentomino.py` [f25712c]
+    - [x] Write unit tests for `Shape` and `Puzzle` classes.
+    - [x] Verify solution finding with known board/piece configurations.
 - [ ] Task: Implement tests for `generate_consolidated_json_ultra_fast.py`
     - [ ] Write integration tests for the generator.
     - [ ] Verify JSON schema and data completeness.
