@@ -9,4 +9,9 @@ export default defineConfig({
   },
   // Base path for GitHub Pages deployment
   base: '/puzzle-a-day/',
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
+  },
 });

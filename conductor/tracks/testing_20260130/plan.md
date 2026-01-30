@@ -22,9 +22,9 @@ Implement unit and integration tests for the core algorithm and data generation.
 ## Phase 2: React Testing Suite (Vitest & RTL)
 Implement component tests for the frontend.
 
-- [ ] Task: Set up `Vitest` and `React Testing Library`
-    - [ ] Install `vitest`, `@testing-library/react`, and `@testing-library/jest-dom`.
-    - [ ] Configure `vite.config.ts` for testing.
+- [x] Task: Set up `Vitest` and `React Testing Library` [7729864]
+    - [x] Install `vitest`, `@testing-library/react`, and `@testing-library/jest-dom`.
+    - [x] Configure `vite.config.ts` for testing.
 - [ ] Task: Implement tests for `Header.tsx`
     - [ ] Verify title rendering and date selection dropdowns.
 - [ ] Task: Implement tests for `PuzzleBoard.tsx` and `PuzzlePiece.tsx`
