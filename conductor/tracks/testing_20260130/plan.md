@@ -14,9 +14,9 @@ Implement unit and integration tests for the core algorithm and data generation.
 - [x] Task: Implement tests for `pentomino.py` [18d442f]
     - [x] Write unit tests for `Shape` and `Puzzle` classes.
     - [x] Verify solution finding with known board/piece configurations.
-- [ ] Task: Implement tests for `generate_consolidated_json_ultra_fast.py`
-    - [ ] Write integration tests for the generator.
-    - [ ] Verify JSON schema and data completeness.
+- [x] Task: Implement tests for `generate_consolidated_json_ultra_fast.py` [83a1b2c]
+    - [x] Write integration tests for the generator.
+    - [x] Verify JSON schema and data completeness.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Python Testing Suite' (Protocol in workflow.md)
 
 ## Phase 2: React Testing Suite (Vitest & RTL)
