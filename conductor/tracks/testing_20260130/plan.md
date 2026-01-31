@@ -51,6 +51,6 @@ Implement full user flow and basic rendering checks.
 ## Phase 4: CI Integration
 Automate test execution.
 
-- [x] Task: Update GitHub Actions [7a8b9c0]
+- [x] Task: Update GitHub Actions [a8b3070]
     - [x] Update `deploy-app.yml` or create a new workflow to run all tests on PR/push.
 - [ ] Task: Conductor - User Manual Verification 'Phase 4: CI Integration' (Protocol in workflow.md)
