@@ -9,13 +9,32 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  build-and-deploy:
+  test-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup UV
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install Python dependencies
+        run: |
+          uv venv
+          uv pip install -r requirements.txt
+          uv pip install pytest pytest-cov
+
+      - name: Run Python tests
+        run: |
+          export PYTHONPATH=$PYTHONPATH:.
+          uv run pytest tests/
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,8 +43,20 @@ jobs:
           cache: 'npm'
           cache-dependency-path: './docs/project/package-lock.json'
 
-      - name: Install dependencies
+      - name: Install Node dependencies
         run: npm ci
+        working-directory: ./docs/project
+
+      - name: Run React component tests
+        run: npx vitest run
+        working-directory: ./docs/project
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+        working-directory: ./docs/project
+
+      - name: Run E2E tests
+        run: npx playwright test
         working-directory: ./docs/project
 
       - name: Build React app
