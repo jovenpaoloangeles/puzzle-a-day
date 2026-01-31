@@ -48,9 +48,9 @@ Implement full user flow and basic rendering checks.
     - [x] Ensure no visual regressions on core UI elements.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: E2E and Visual Verification' (Protocol in workflow.md)
 
-## Phase 4: CI Integration
+## Phase 4: CI Integration [checkpoint: b51bd1d]
 Automate test execution.
 
 - [x] Task: Update GitHub Actions [a8b3070]
     - [x] Update `deploy-app.yml` or create a new workflow to run all tests on PR/push.
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: CI Integration' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4: CI Integration' (Protocol in workflow.md)
