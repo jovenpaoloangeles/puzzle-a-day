@@ -35,7 +35,7 @@ Implement component tests for the frontend.
     - [x] Verify data fetching and date filtering logic.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: React Testing Suite' (Protocol in workflow.md)
 
-## Phase 3: E2E and Visual Verification (Playwright)
+## Phase 3: E2E and Visual Verification (Playwright) [checkpoint: 9e2f3f7]
 Implement full user flow and basic rendering checks.
 
 - [x] Task: Set up `Playwright` [9dffdc7]
